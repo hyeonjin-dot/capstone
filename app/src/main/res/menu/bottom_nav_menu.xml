@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_calendar"
+        android:title="Calendar"
+        android:icon="@drawable/calendar"/>
+    <item
+        android:id="@+id/action_addinfo"
+        android:title="Add"
+        android:icon="@drawable/addinfo"/>
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/search"/>
+    <item
+        android:id="@+id/action_recommand"
+        android:title="Recommand"
+        android:icon="@drawable/ai"/>
+    <item
+        android:id="@+id/action_settings"
+        android:title="Settings"
+        android:icon="@drawable/settings"/>
+</menu>

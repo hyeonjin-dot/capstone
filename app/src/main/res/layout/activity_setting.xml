@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SearchActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu"/>
+
+    <!-- 로그인 (회원가입) -->
+    <!-- 로그인 버튼 -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그아웃"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <!-- 개인 정보 -->
+
+    <!-- 사용자 이름 -->
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logoutButton"
+        android:layout_alignParentEnd="true"
+        android:text="정보수정" />
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사용자 이름"
+        android:textSize="18sp"
+        android:layout_below="@+id/galleryButton"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:layout_below="@+id/galleryButton"
+        android:layout_toRightOf="@id/usernameText"
+        android:layout_alignStart="@+id/thismonth"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/loginplz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="로그인이 필요합니다."
+        android:textSize="18sp"
+        android:layout_below="@+id/galleryButton"
+        android:layout_toRightOf="@id/usernameText"
+        android:layout_alignStart="@+id/thismonth"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 생일 -->
+    <TextView
+        android:id="@+id/birthdayText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="생일"
+        android:textSize="18sp"
+        android:layout_below="@+id/usernameText"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/birthdayText"
+        android:layout_alignStart="@+id/thismonth"
+        android:text=""
+        android:textSize="18sp" />
+    <!-- 이번달 관극 횟수 -->
+    <TextView
+        android:id="@+id/thismonthtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이번 달 관극 횟수"
+        android:textSize="18sp"
+        android:layout_below="@+id/birthdayText"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/thismonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/birthday"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/thismonthtxt"
+        android:layout_marginLeft="10sp"
+        android:textSize="18sp" />
+
+    <!-- 가장 가까운 극 -->
+    <TextView
+        android:id="@+id/closeonetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가까운 극"
+        android:textSize="18sp"
+        android:layout_below="@+id/thismonthtxt"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/closeone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thismonth"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/birthdayText"
+        android:layout_alignStart="@+id/thismonth"
+        android:textSize="18sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="75dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/userImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/defaultprofile"
+                android:scaleType="centerCrop" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/galleryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="10dp"
+            android:text="Gallery App" />
+
+        <Button
+            android:id="@+id/cameraButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/galleryButton"
+            android:layout_alignBaseline="@+id/galleryButton"
+            android:text="Camera App" />
+
+
+</RelativeLayout>

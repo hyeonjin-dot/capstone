@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="16dp"
+tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/mainTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/mainTextView" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarView"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!--데이터 출력하는 창인데 사진으로 나타내서 선택하는 게 나을 수 도 있을 듯 -->
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateTextView"
+        android:padding="16dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/dateTextView"
+        android:layout_above="@id/bottomNavigationView"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/firBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY" />
+
+        <ImageButton
+            android:id="@+id/secBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:scaleType="fitXY"  />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu"/>
+
+</RelativeLayout>

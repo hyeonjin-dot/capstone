@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".SearchActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu"/>
+
+    <LinearLayout
+        android:id="@+id/btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/togglebtn"
+            android:layout_width="54dp"
+            android:layout_height="wrap_content"
+            android:text="ToggleButton"
+            android:textOff="All"
+            android:textOn="My" />
+
+        <!-- 검색창 -->
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:hint="Enter your search" />
+
+        <!-- 버튼과 이미지 버튼을 감싸는 레이아웃 datebtn o -> 1.5-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="horizontal">
+
+            <!-- 버튼 -->
+            <!--
+            <Button
+                android:id="@+id/btnDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Date" />-->
+
+            <!-- 이미지 버튼 -->
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/search"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:id="@+id/yddCheckLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/yddBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <NumberPicker
+                android:id="@+id/yearPic"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                />
+
+            <NumberPicker
+                android:id="@+id/monPic"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                />
+
+            <NumberPicker
+                android:id="@+id/dayPic"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <Button
+                android:id="@+id/cancelBtn"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:id="@+id/enterBtn"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Enter"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+-->
+
+
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnlayout"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Nothing to Show"
+        android:layout_marginTop="20dp"
+        android:textSize="50dp" />
+
+    <!-- 버튼 생성될 scrollView -->
+    <ScrollView
+        android:id="@+id/buttonScrollView"
+        android:layout_below="@id/btnlayout"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/chatbotBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_margin="16dp"
+        android:text="ChatBot" />
+
+</RelativeLayout>

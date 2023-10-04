@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AIActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@id/bottomNavigationView"
+        android:gravity="center_vertical|center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/musicalButton"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_weight="1"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/musical" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/musicalButton"
+                android:layout_centerHorizontal="true"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="Musical"/>
+
+            </LinearLayout>
+
+        <!-- 상단 이미지 버튼 2 -->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+                <ImageButton
+                    android:id="@+id/seatButton"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:layout_weight="1"
+                    android:layout_below="@id/musicalButton"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/seats"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/seatButton"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:text="Seat"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+            <ImageButton
+                android:id="@+id/locaButton"
+                android:layout_width="190dp"
+                android:layout_height="190dp"
+                android:layout_weight="1"
+                android:layout_below="@id/seatButton"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/location"/>
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/locaButton"
+                android:layout_centerHorizontal="true"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="Location"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageButton
+                    android:id="@+id/boardButton"
+                    android:layout_width="190dp"
+                    android:layout_height="190dp"
+                    android:layout_weight="1"
+                    android:layout_below="@id/seatButton"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerInside"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/board"/>
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/locaButton"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30dp"
+                    android:textStyle="bold"
+                    android:text="Board"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="unlabeled"
+        app:menu="@menu/bottom_nav_menu"/>
+
+
+</RelativeLayout>
